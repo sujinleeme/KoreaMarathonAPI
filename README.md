@@ -62,19 +62,15 @@ API는 아래 링크를 통해 조회 가능합니다.
 `(파일명: clear-day.svg)`
 Reference. [Skycons](https://darkskyapp.github.io/skycons/) 
 
-# Development
+### Development
+Built with Python3 Packages : beautifulSoup, requests, forecastio
 
-## Python3 Packages
-* beautifulSoup, requests, forecastio
-
-## How to setup and execute 
+#### How to setup and execute crawler
 
 1. Go to your working directory and install Python virtual environment named `marathonvenv`
-
 ```
 python3 -m venv marathonvenv
 ```
-
 2. Activate Python virtual environment 
 ```
 source marathonvenv/bin/activate
@@ -84,8 +80,14 @@ source marathonvenv/bin/activate
 pip3 install requests python-forecastio beautifulsoup4
 ```
 4. Git clone this repository
+```
+git clone https://github.com/sujinleeme/KoreaMarathonAPI.git
+```
+5. Execute `event_crawler.py`
+```
+python3 event_crawler.py
+```
 
-5. Execute event_
 
 # TODO 
 Make Python script to fecth the Firebase’s REST API
