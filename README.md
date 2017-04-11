@@ -10,7 +10,7 @@ API는 아래 링크를 통해 조회 가능합니다.
 * 전체 이벤트 : https://irunseoul-3204d.firebaseio.com/event.json
 * 년간 이벤트 : https://irunseoul-3204d.firebaseio.com/event/2017.json
 
-##### Response Values
+#### Response Values
 
 | Name               | Type | Definition |
 |--------------------|------|------------|
@@ -57,7 +57,7 @@ API는 아래 링크를 통해 조회 가능합니다.
 }
 ```
 
-##### 날씨 아이콘 
+#### 날씨 아이콘 
 `"weather"` key에 해당하는 value로 SVG파일을 조회할 수 있습니다.
 `(파일명: clear-day.svg)`
 Reference. [Skycons](https://darkskyapp.github.io/skycons/) 
