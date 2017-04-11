@@ -10,35 +10,59 @@ API는 아래 링크를 통해 조회 가능합니다.
 * 전체 이벤트 : https://irunseoul-3204d.firebaseio.com/event.json
 * 년간 이벤트 : https://irunseoul-3204d.firebaseio.com/event/2017.json
 
-
 ##### Response Values
 
 | Name               | Type | Definition |
 |--------------------|------|------------|
-| application_period |      |            |
-| city               |      |            |
-| date               |      |            |
-| description        |      |            |
-| email              |      |            |
+| title              |      |            |
 | host               |      |            |
-| latitude           |      |            |
-| location           |      |            |
-| longitude          |      |            |
-| map_url            |      |            |
+| email              |      |            |
+| date               |      |            |
 | phone              |      |            |
 | race               |      |            |
-| temperature        |      |            |
-| title              |      |            |
-| weather            |      |            |
+| city               |      |            |
+| location           |      |            |
+| application_period |      |            |
 | website            |      |            |
+| description        |      |            |
+| latitude           |      |            |
+| longitude          |      |            |
+| map_url            |      |            |
+| temperature        |      |            |
+| weather            |      |            |
 
 ```json
-{"application_period":"2016/12/12 - 2017/2/28","city":"지역","date":"2017/03/19 08:00",
-"description":"서울국제마라톤 겸 제88회 동아마라톤","email":"marathon@donga.com","host":"동아일보사","latitude":"37.5726574782299","location":"서울광화문광장, 올림픽공원, 잠실주경기장","longitude":"126.97692131590603","map_url":"http://map.daum.net/link/map/8193961",
-"phone":"02-361-1425","race":["풀","10km","2인릴레이","4인릴레이"],
-"temperature":"","title":"서울국제마라톤 겸 제88회 동아마라톤",
-"weather":"21","website":"http://www.seoul-marathon.com"}
+{
+    "title": "서울국제마라톤 겸 제88회 동아마라톤",
+    "host": "동아일보사",
+    "email": "marathon@donga.com",
+    "date": "2017/03/19 08:00",
+    "phone": "02-361-1425",
+    "race": {
+        "0": "풀",
+        "1": "10km",
+        "2": "2인릴레이",
+        "3": "4인릴레이"
+    },
+    "city": "지역",
+    "location": "서울광화문광장, 올림픽공원, 잠실주경기장",
+    "application_period": "2016/12/12 - 2017/2/28",
+    "website": "http://www.seoul-marathon.com",
+    "description": "서울국제마라톤 겸 제88회 동아마라톤",
+    "latitude": "37.5726574782299",
+    "longitude": "126.97692131590603",
+    "map_url": "http://map.daum.net/link/map/8193961",
+    "temperature": "2.9°C",
+    "weather": "clear-day"
+}
 ```
+
+##### 날씨 아이콘 
+`"weather"` key에 해당하는 value로 SVG파일을 조회할 수 있습니다.
+`(파일명: clear-day.svg)`
+Reference. [Skycons](https://darkskyapp.github.io/skycons/) 
+
+# Developement
 
 ## Python3 Packages
 * beautifulSoup, requests, forecastio
