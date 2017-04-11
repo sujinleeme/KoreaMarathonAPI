@@ -160,7 +160,7 @@ print("Ready to save {} events in file".format(len(result_crawled)))
 jsonObj = json.dumps(result_crawled, ensure_ascii=False, indent=4)
 
 #save file
-with open("2017Event.json", "w") as f:
+with open("/json-sample/2017Event.json", "w") as f:
     try:
         f.write(jsonObj)
         print("Updated all data successfully 2017Event.json!")
