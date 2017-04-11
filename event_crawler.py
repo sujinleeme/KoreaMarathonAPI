@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-
 # Title : crawling event data in pathetic old Korean marathon website
 # Website : http://www.roadrun.co.kr/schedule/
 # Korean : 마라톤 웹사이트 이벤트(2016부터) 데이터 크롤링
 # Written by : @sujinleeme
 # Date : 2017. 04. 08.
+
 import re
 import datetime
 import requests
@@ -63,10 +63,6 @@ def execute_crawling(start):
     all_data = data_formatting(all_data)
     result = dict([("2017", all_data)])
     return(result)
-
-
-
-
 
 def data_formatting(data):
     keys = ["title", "host", "email", "date", "phone", "race", "city",
